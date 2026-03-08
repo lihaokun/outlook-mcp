@@ -3,11 +3,33 @@ name = "outlook-mcp"
 version = "0.1.0"
 description = "MCP server for Outlook — enables AI assistants to access email, contacts, and calendars via win32com"
 readme = "README.md"
+license = "MIT"
 requires-python = ">=3.10"
+authors = [
+    { name = "lihaokun", email = "ker@pm.me" },
+]
+keywords = ["mcp", "outlook", "email", "win32com", "ai", "claude"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: Microsoft :: Windows",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Communications :: Email",
+]
 dependencies = [
     "mcp[cli]>=1.2.0",
     "pywin32>=306",
 ]
+
+[project.urls]
+Homepage = "https://github.com/lihaokun/outlook-mcp"
+Repository = "https://github.com/lihaokun/outlook-mcp"
+Issues = "https://github.com/lihaokun/outlook-mcp/issues"
 
 [project.scripts]
 outlook-mcp = "outlook_mcp.server:main"
