@@ -647,14 +647,14 @@ def create_event(
         target_calendar = _resolve_folder(ns, calendar_id)
 
     appt.Subject = title
-    appt.Start = start_date
+    # Outlook COM requires datetime objects, not ISO strings
+    start_dt = datetime.fromisoformat(start_date)
+    appt.Start = start_dt
 
     if end_date:
-        appt.End = end_date
+        appt.End = datetime.fromisoformat(end_date)
     else:
-        # Default +1 hour
-        start_dt = datetime.fromisoformat(start_date)
-        appt.End = (start_dt + timedelta(hours=1)).isoformat()
+        appt.End = start_dt + timedelta(hours=1)
 
     if location:
         appt.Location = location
