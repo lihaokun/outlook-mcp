@@ -1,0 +1,17 @@
+[project]
+name = "outlook-mcp"
+version = "0.1.0"
+description = "MCP server for Outlook — enables AI assistants to access email, contacts, and calendars via win32com"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "mcp[cli]>=1.2.0",
+    "pywin32>=306",
+]
+
+[project.scripts]
+outlook-mcp = "outlook_mcp.server:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
