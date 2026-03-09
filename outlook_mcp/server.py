@@ -8,7 +8,7 @@ from mcp.server.fastmcp import FastMCP
 
 from . import outlook
 
-mcp = FastMCP("outlook-mcp")
+mcp = FastMCP("outlook-mcp-server")
 
 
 def _json(data) -> str:
@@ -286,13 +286,13 @@ def main():
     if "--version" in sys.argv or "-V" in sys.argv:
         try:
             from importlib.metadata import version
-            ver = version("outlook-mcp-server")
+            ver = version("outlook-mcp-server-server")
         except Exception:
             ver = "dev"
-        print(f"outlook-mcp {ver}")
+        print(f"outlook-mcp-server {ver}")
         return
     if "--help" in sys.argv or "-h" in sys.argv:
-        print("Usage: outlook-mcp")
+        print("Usage: outlook-mcp-server")
         print("  MCP server for Outlook (stdio transport)")
         print()
         print("Options:")

@@ -31,7 +31,7 @@ pip install outlook-mcp-server
 Verify installation:
 
 ```bash
-outlook-mcp --version
+outlook-mcp-server --version
 ```
 
 ## Usage with Claude Code
@@ -42,7 +42,7 @@ Add to your project's `.mcp.json`:
 {
   "mcpServers": {
     "outlook": {
-      "command": "outlook-mcp"
+      "command": "outlook-mcp-server"
     }
   }
 }
@@ -65,7 +65,7 @@ pip install -e .
       "command": "uv",
       "args": [
         "--directory", "C:\\path\\to\\outlook-mcp",
-        "run", "outlook-mcp"
+        "run", "outlook-mcp-server"
       ]
     }
   }
