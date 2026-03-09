@@ -1,7 +1,7 @@
 # outlook-mcp
 
-[![PyPI version](https://img.shields.io/pypi/v/outlook-mcp)](https://pypi.org/project/outlook-mcp/)
-[![Python](https://img.shields.io/pypi/pyversions/outlook-mcp)](https://pypi.org/project/outlook-mcp/)
+[![PyPI version](https://img.shields.io/pypi/v/outlook-mcp-server)](https://pypi.org/project/outlook-mcp-server/)
+[![Python](https://img.shields.io/pypi/pyversions/outlook-mcp-server)](https://pypi.org/project/outlook-mcp-server/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 MCP server for Outlook — enables AI assistants to access email, contacts, and calendars via Windows COM interface.
@@ -25,7 +25,7 @@ Built on the [Model Context Protocol](https://modelcontextprotocol.io/) (MCP), w
 ## Install
 
 ```bash
-pip install outlook-mcp
+pip install outlook-mcp-server
 ```
 
 Verify installation:

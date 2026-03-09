@@ -286,7 +286,7 @@ def main():
     if "--version" in sys.argv or "-V" in sys.argv:
         try:
             from importlib.metadata import version
-            ver = version("outlook-mcp")
+            ver = version("outlook-mcp-server")
         except Exception:
             ver = "dev"
         print(f"outlook-mcp {ver}")

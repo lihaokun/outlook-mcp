@@ -1,5 +1,5 @@
 [project]
-name = "outlook-mcp"
+name = "outlook-mcp-server"
 version = "0.1.0"
 description = "MCP server for Outlook — enables AI assistants to access email, contacts, and calendars via win32com"
 readme = "README.md"
@@ -33,6 +33,9 @@ Issues = "https://github.com/lihaokun/outlook-mcp/issues"
 
 [project.scripts]
 outlook-mcp = "outlook_mcp.server:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["outlook_mcp"]
 
 [build-system]
 requires = ["hatchling"]
