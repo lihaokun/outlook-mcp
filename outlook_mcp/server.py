@@ -1,6 +1,7 @@
 """Outlook MCP Server — exposes Outlook operations as MCP tools via stdio."""
 
 import json
+import sys
 from typing import Optional
 
 from mcp.server.fastmcp import FastMCP
@@ -282,6 +283,22 @@ def createEvent(
 
 def main():
     """Run the MCP server with stdio transport."""
+    if "--version" in sys.argv or "-V" in sys.argv:
+        try:
+            from importlib.metadata import version
+            ver = version("outlook-mcp")
+        except Exception:
+            ver = "dev"
+        print(f"outlook-mcp {ver}")
+        return
+    if "--help" in sys.argv or "-h" in sys.argv:
+        print("Usage: outlook-mcp")
+        print("  MCP server for Outlook (stdio transport)")
+        print()
+        print("Options:")
+        print("  -V, --version  Show version and exit")
+        print("  -h, --help     Show this help and exit")
+        return
     mcp.run(transport="stdio")
 
 
